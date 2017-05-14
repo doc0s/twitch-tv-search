@@ -1,0 +1,120 @@
+.img-container {
+    justify-content: center;
+    margin-left: 20px;
+    display: table-cell;
+}
+
+.stream-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin-left: 20px;
+    vertical-align: middle;
+}
+
+button {
+    padding: 0.50em 1em;
+    display: inline-block;
+    font-size: 1em;
+    border-radius: 3px;
+}
+
+input#query-input {
+    font-size: 1.25em;
+    border-radius: 3px;
+    width: 28em;
+    height: 1.8em;
+    padding-left: 0.5em;
+}
+
+div a {
+    color: #000;
+    display: block;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10% 10%;
+    width: 80%;
+    border: 1px solid black;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.result-container {
+    display: flex;
+    flex: 1;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    margin-bottom: 1em;
+}
+
+#prev-button {
+    visibility: hidden;;
+}
+
+#next-button {
+    visibility: hidden;
+}
+
+.arrow {
+    font-size: 1.75em;
+    font-weight: bolder;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.results {
+    flex: 1;
+}
+
+.result-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0.5em 1.0em;
+    flex: 1;
+}
+
+.result-text {
+    flex-direction: column;
+    margin-left: 1em;
+}
+
+.thumbnail {
+    height: auto;
+    width: auto;
+    max-width: 120px;
+    max-height: 120px;
+
+}
+
+.game-name {
+    font-size: 1.5em;
+}
+
+.status {
+    font-size: 1.25em;
+}
+
+.result-container:hover {
+    background-color: #F8EFFB;
+}
