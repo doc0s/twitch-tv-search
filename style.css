@@ -94,6 +94,11 @@ div a {
     flex: 1;
 }
 
+.display-name {
+    font-size: 2.0em;
+    font-weight: bolder;
+}
+
 .result-text {
     flex-direction: column;
     margin-left: 1em;
@@ -102,8 +107,8 @@ div a {
 .thumbnail {
     height: auto;
     width: auto;
-    max-width: 120px;
-    max-height: 120px;
+    max-width: 160px;
+    max-height: 160px;
 
 }
 

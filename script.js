@@ -54,7 +54,8 @@
                                 "<div class='result-container'>" +
                                     "<div class='img-container'><p><img class='thumbnail' src='" + stream.preview.medium + "'/></p></div>" +
                                     "<div class='stream-info'>" +
-                                        "<div class='game-name'>" + (stream.game || "No Game Name") + " - " + stream.viewers + " viewers</div>" +
+                                        "<div class='display-name'>" + (stream.channel.display_name || "No Display name") + "</div>" +
+                                        "<div class='game-name'>" + (stream.game || "No Game name") + " - " + stream.viewers + " viewers</div>" +
                                         "<div class ='status'>" + (stream.channel.status || "No description available...") + "</div>" +
                                     "</div>" +
                                 "</div>" +
