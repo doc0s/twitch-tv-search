@@ -1,5 +1,6 @@
 (function() {
     'use strict';
+
     // Set client ID
     var clientIdInput = document.getElementById("client-id");
 
@@ -16,6 +17,8 @@
         document.body.removeChild(script);
     };
 
+    // Compose full url for Twitch jsonp request.
+    // Return undefined when client ID is not specified.
     var composeUrl = function(query) {
         if (clientIdInput.value && clientIdInput.value !== '') {
             // Get jsonp data with callback name: handle_callback
@@ -27,7 +30,7 @@
         }
     };
 
-    // Twitch api returns 10 items at maximum.
+    // Twitch api returns 10 items at maximum all at once.
     // The url for prev/next page is stored in response._links as:
     // https://api.twitch.tv/kraken/search/streams?limit=10&offset=10&q=query-term
     // This method extracts the offset value from url above.
@@ -45,6 +48,7 @@
 
     };
 
+    // Create and append dom element from a twitch stream.
     var showResultRow = function(stream) {
         var row = document.createElement('div');
         var resultsList = document.getElementById('results-list');
@@ -83,7 +87,7 @@
 
         clearResult();
 
-        // Result controls
+        // Update result controls
         document.getElementById('results-total').innerHTML = "Total Results: " + total;
         var prevButton = document.getElementById('prev-button');
         prevButton.style.visibility = links.prev ? "visible" : "hidden";
@@ -97,7 +101,7 @@
         pageElement.innerHTML =  currentIndex + " / " + pages;
 
 
-        // Results list
+        // Update results list element
         for (var i = 0; i < streams.length; i++) {
             showResultRow(streams[i]);
         }
@@ -138,6 +142,7 @@
         showResult(response);
     }
 
+    // Set the callback function in global object so that jsonp call can access it
     window.handle_callback = handleCallback;
 })();
 

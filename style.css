@@ -87,6 +87,12 @@ div a {
     flex: 1;
 }
 
+.no-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .result-row {
     display: flex;
     flex-direction: row;
